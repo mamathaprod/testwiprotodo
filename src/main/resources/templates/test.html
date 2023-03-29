@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+<script>
+
+const request = new XMLHttpRequest();
+const url = 'http://localhost:8080/employee/findAll';
+request.open("GET", url);
+request.send();
+
+request.onload = (e) => {
+    alert(request.response);
+}
+
+</script>
+    </head>
+    <body>
+        <form action="http://localhost:8080/" method="POST">
+            <label>
+                Employee First Name: <input type="text" name="title" placeholder="Employee" />
+            </label>
+           <label>
+                Employee Last Name: <input type="text" name="title" placeholder="Employee" />
+            </label>
+            <input type="submit" value="Submit" />
+        </form>
+    </body>
+</html>
